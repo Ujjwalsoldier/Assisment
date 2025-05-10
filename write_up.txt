@@ -1,0 +1,17 @@
+* A short write-up (1-2 pages) covering:
+    * Bug fixes for Task 2.
+    * Explanation of attack detection script (Task 3).
+    * Optional CDN optimization recommendation (Task 5).
+
+Bug fixes for Task 2: 
+Error was TypeError: '>=' not supported between instances of 'str' and 'int' for is_error_status fucntion , which is correct as   , 
+we needed to covert status in int type as it was coming in str format.
+
+
+Explanation of attack detection script (Task 3):
+#Two assuptions for bad ip detection
+# Flag IPs with too many 4xx or 5xx errors (bad behavior) - assumption: more than 350
+# Flag IPs with too many requests (possibly it can be bots) - assumption : more than 240
+
+Optional CDN optimization recommendation (Task 5).
+we can block Block IPs that are sending too many bad requests (fr 4xx or 5xx errors) using rate limiting on the CDN.

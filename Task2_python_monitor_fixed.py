@@ -9,13 +9,14 @@ def parse_log_line(log_line):
         timestamp = datetime.strptime(timestamp_str, '%d/%b/%Y:%H:%M:%S %z')
         return {
             'timestamp': timestamp,
-            'status': status,
+            'status': int(status), # earliear error was TypeError: '>=' not supported between instances of 'str' and 'int' , we needed to covert status in int as it coming in str format.
             'ip': ip
         }
     else:
         return None
 
 def is_error_status(status):
+    # import pdb; pdb.set_trace()
     return status >= 400 and status <= 599
 
 def monitor_logs(log_file):
