@@ -1,4 +1,4 @@
-# Assessment for Application Support Developer Role
+# Assessment for Application Support 
 
 You are given reports of intermittent performance issues from a customer's website. Your task is to analyze simulated logs, debug a script, query a database, and propose a solution—all while demonstrating your ability to monitor, script, and problem-solve effectively.
 
